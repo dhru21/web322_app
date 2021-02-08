@@ -44,6 +44,10 @@ app.get("/about", function (req, res) {
   res.sendFile(path.join(__dirname + "/node_modules/views/about.html"));
 });
 
+app.get("/site", function (req, res) {
+  res.sendFile(path.join(__dirname + "/node_modules/public/css/site.css"));
+});
+
 app.get("/employees", function (req, res) {
   dataService
     .getAllEmployees()
